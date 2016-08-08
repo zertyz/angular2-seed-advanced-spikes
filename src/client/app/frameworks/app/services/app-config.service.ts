@@ -8,7 +8,8 @@ export class AppConfigService {
     { code: 'es', title: 'Spanish' },
     { code: 'fr', title: 'French' },
     { code: 'ru', title: 'Russian' },
-    { code: 'bg', title: 'Bulgarian' }
+    { code: 'bg', title: 'Bulgarian' },
+    { code: 'pt', title: 'Portuguese' }
   ];
 
 }
