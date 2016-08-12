@@ -33,6 +33,8 @@ build/Release
 #IDE configuration files
 .idea
 *.iml
+.vscode
+.github
 
 dist
 dev
