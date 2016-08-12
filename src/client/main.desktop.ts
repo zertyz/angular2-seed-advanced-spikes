@@ -29,9 +29,9 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') {
+//  if (process.platform !== 'darwin') {
     app.quit();
-  }
+//  }
 });
 
 app.on('ready', () => {
@@ -49,9 +49,9 @@ app.on('ready', () => {
 
   mainWindow.webContents.on('did-navigate-in-page', (e: any, url: string) => {
     console.log(`Page navigated: ${url}`);
-  });  
+  });
 
-  let appTitle: string = `Angular 2 Seed Advanced`;  
+  let appTitle: string = `Angular 2 Seed Advanced`;
 
   let langMenu: any = {
     label: 'Language',
@@ -107,7 +107,7 @@ app.on('ready', () => {
           shell.openExternal('http://codeology.braintreepayments.com/nathanwalker/angular2-seed-advanced');
         }
       }]
-  };  
+  };
 
   if (process.platform === 'darwin') {
     template = [{
