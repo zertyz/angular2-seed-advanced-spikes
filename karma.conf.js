@@ -30,6 +30,11 @@ module.exports = function(config) {
       'node_modules/zone.js/dist/async-test.js',
       'node_modules/zone.js/dist/fake-async-test.js',
 
+      // ng2-nvd3
+      'node_modules/d3/d3.js',
+      'node_modules/nvd3/build/nv.d3.js',
+      { pattern: 'node_modules/ng2-nvd3/**/*.js', included: false, watched: false },
+
       // RxJs.
       { pattern: 'node_modules/rxjs/**/*.js', included: false, watched: false },
       { pattern: 'node_modules/rxjs/**/*.js.map', included: false, watched: false },
@@ -43,7 +48,7 @@ module.exports = function(config) {
       { pattern: 'node_modules/ng2-translate/**/*.js', included: false, watched: false },
       { pattern: 'node_modules/@ngrx/**/*.js', included: false, watched: false },
       { pattern: 'node_modules/angulartics2/**/*.js', included: false, watched: false },
-      
+
       { pattern: 'dist/dev/**/*.js', included: false, watched: true },
       { pattern: 'dist/dev/**/*.html', included: false, watched: true, served: true },
       { pattern: 'dist/dev/**/*.css', included: false, watched: true, served: true },
@@ -58,7 +63,7 @@ module.exports = function(config) {
     // must go along with above, suppress annoying 404 warnings.
     proxies: {
       '/assets/': '/base/dist/dev/assets/'
-    },  
+    },
 
     // list of files to exclude
     exclude: [
