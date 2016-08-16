@@ -85,7 +85,7 @@ export class Ng2NvD3ChartsComponent implements OnInit {
   options: any;
   data   : any;
 
-  color = d3.scale.category20();
+
 
   sinAndCos() {
     var sin:  any;
@@ -507,7 +507,7 @@ export class Ng2NvD3ChartsComponent implements OnInit {
           width: (function() { return nv.utils.windowSize().width; })(),
           margin:{top: 20, right: 20, bottom: 20, left: 20},
           color: function(d: any) {
-            return this.color(d.group);
+            return d3.scale.category20().range()[d.group];
           },
           nodeExtras: function(node: any) {
             if (node)  node
