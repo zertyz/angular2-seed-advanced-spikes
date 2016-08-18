@@ -11,7 +11,7 @@ export class ProjectConfig extends SeedAdvancedConfig {
 
   constructor() {
     super();
-    this.APP_TITLE = 'My Own Spikes...';
+    this.APP_TITLE = 'Garçom Virtual';
 
     /* Enable typeless compiler runs (faster) between typed compiler runs. */
     // this.TYPED_COMPILE_INTERVAL = 5;
@@ -44,7 +44,7 @@ export class ProjectConfig extends SeedAdvancedConfig {
 
     // ng2-nvd3 module configuration
     this.SYSTEM_CONFIG_DEV.paths['ng2-nvd3/*']      = `${this.APP_BASE}node_modules/ng2-nvd3/build/lib/*`;
-    this.SYSTEM_CONFIG    .paths['ng2-nvd3']      = `${this.APP_BASE}node_modules/ng2-nvd3/build/lib/ng2-nvd3.js`;  // needed when this.TARGET_DESKTOP == true (doesn't work for  or this.TARGET_MOBILE_HYBRID)
+    this.SYSTEM_CONFIG    .paths['ng2-nvd3']        = `${this.APP_BASE}node_modules/ng2-nvd3/build/lib/ng2-nvd3.js`;  // needed when this.TARGET_DESKTOP == true (doesn't work for  or this.TARGET_MOBILE_HYBRID)
     this.SYSTEM_BUILDER_CONFIG.packages['ng2-nvd3'] = {main: 'ng2-nvd3aa.js', defaultExtension : 'js'};
     this.SYSTEM_BUILDER_CONFIG.paths['ng2-nvd3/*']  = `${this.APP_BASE}node_modules/ng2-nvd3/build/lib/*`;
 
