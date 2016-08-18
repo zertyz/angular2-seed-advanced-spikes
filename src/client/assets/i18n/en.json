@@ -7,5 +7,14 @@
   "ABOUT_REWARD": "For reward, here is a list of awesome computer scientists:",
   "INPUT_HINT": "Enter a new computer scientist...",
   "ADD_BTN_TEXT": "Add",
-  "SUCCESS_MSG": "Your deployment of Angular 2 Advanced Seed worked perfectly."
+  "SUCCESS_MSG": "Your deployment of Angular 2 Advanced Seed worked perfectly.",
+
+  "APP_NAME": "Virtual Waiter",
+
+  "GV_HOME_TITLE": "We already got enough to start!",
+  "GV_HOME_INFO" : "This message showing up means we know how to create components that share contents between Web, Desktop and Mobile. We may start!",
+  "GV_HOME_START": "Clique here to enter",
+
+  "JSON_SUCKS": "for not allowing the last element to have a comma... for not allowing comments... for requiring indexes to be quoted..."
+
 }
