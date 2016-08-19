@@ -1,4 +1,4 @@
-import {t, selectDropdownByValue} from '../../frameworks/test/index';
+import {t, selectDropdownByValue} from '../../../frameworks/test/index';
 
 declare var browser: any, element: any, by: any;
 
@@ -11,7 +11,7 @@ t.describe('Home', function() {
   t.it('should have correct h2', function() {
       t.e(element(by.css('sd-app sd-home h2')).getText()).toEqual('I love technology!');
   });
- 
+
   t.it('should have an input', function() {
     t.e(element(by.css('sd-app sd-home form input')).isPresent()).toEqual(true);
   });
@@ -27,7 +27,7 @@ t.describe('Home', function() {
     t.e(element(by.css('sd-app sd-home ul')).getText())
       .toEqual('Edsger Dijkstra\nDonald Knuth\nAlan Turing\nGrace Hopper\nTim Berners-Lee');
   });
-  
+
   t.it('language switcher should change language', function() {
     t.e(element(by.css('sd-app sd-home h2')).getText()).toEqual('I love technology!');
     selectDropdownByValue('sd-app sd-toolbar lang-switcher select', 'fr', 500);
