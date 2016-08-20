@@ -1,9 +1,9 @@
 {
-  "name": "angular2-seed-advanced",
+  "name": "Garcom-Virtual",
   "main": "app.js",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "nativescript": {
-    "id": "com.yourdomain.appname",
+    "id": "com.mutuatech.garcomvirtual",
     "tns-ios": {
       "version": "2.1.1"
     },
