@@ -1,7 +1,7 @@
 :host {
   display: block;
   padding: 0 16px;
-  background: #000000 url("./assets/img/pages/gv-home/bg.jpg") repeat bottom left;
+  background: #E0E0E0 url("./assets/img/pages/gv-home/bg.jpg") repeat bottom left;
 }
 
 input {
@@ -11,17 +11,6 @@ input {
 ul {
   list-style-type: none;
   padding: 0 0 0 8px;
-}
-
-smile {
-  background: url("./assets/svg/smile.svg");
-  height: 48px;
-  width: 48px;
-  display: inline-block;
-  transform: scale(0.6);
-  margin-top: -25px;
-  position: relative;
-  top: 16px;
 }
 
 a.link {
