@@ -1,0 +1,14 @@
+.container-content {
+  background-image: ~/assets/img/pages/gv-home/bg.jpg;
+}
+
+.text {
+  font-size: 28;
+  font-weight: bold;
+  color: purple;
+  margin: 8 0 8 0;
+}
+
+.list-item {
+  padding: 5;
+}

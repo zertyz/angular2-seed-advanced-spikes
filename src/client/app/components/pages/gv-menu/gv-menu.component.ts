@@ -7,18 +7,18 @@ import {NameListService} from '../../../frameworks/app/index';
 
 @FormComponent({
   moduleId: module.id,
-  selector: 'gv-home',
-  templateUrl: 'gv-home.component.html',
-  styleUrls: ['gv-home.component.css']
+  selector: 'gv-menu',
+  templateUrl: 'gv-menu.component.html',
+  styleUrls: ['gv-menu.component.css']
 })
-export class GvHomeComponent {
+export class GvMenuComponent {
   public newName: string = '';
   constructor(private store: Store<any>, public nameListService: NameListService, public routerext: RouterExtensions) {
 
   }
 
-  gotoStart() {
-    this.routerext.navigate(['/gv-novaConta'], {
+  gotoNext() {
+    this.routerext.navigate(['/gv-confirmaPedidos'], {
       transition: {
         duration: 1000,
         name: 'slideTop',

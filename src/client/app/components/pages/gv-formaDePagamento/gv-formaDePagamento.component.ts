@@ -7,18 +7,18 @@ import {NameListService} from '../../../frameworks/app/index';
 
 @FormComponent({
   moduleId: module.id,
-  selector: 'gv-home',
-  templateUrl: 'gv-home.component.html',
-  styleUrls: ['gv-home.component.css']
+  selector: 'gv-formaDePagamento',
+  templateUrl: 'gv-formaDePagamento.component.html',
+  styleUrls: ['gv-formaDePagamento.component.css']
 })
-export class GvHomeComponent {
+export class GvFormaDePagamentoComponent {
   public newName: string = '';
   constructor(private store: Store<any>, public nameListService: NameListService, public routerext: RouterExtensions) {
 
   }
 
-  gotoStart() {
-    this.routerext.navigate(['/gv-novaConta'], {
+  gotoNext() {
+    this.routerext.navigate(['/gv-pesquisaSatisfacao'], {
       transition: {
         duration: 1000,
         name: 'slideTop',

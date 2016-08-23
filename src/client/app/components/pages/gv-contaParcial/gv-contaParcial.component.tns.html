@@ -1,0 +1,9 @@
+<ActionBar [title]="'APP_NAME' | translate">
+</ActionBar>
+<StackLayout class="container-content">
+  <Label [text]="'GV_CONTA_PARCIAL_TITLE' | translate" textWrap="true" class="text"></Label>
+  <Label [text]="'GV_CONTA_PARCIAL_INFO' | translate" textWrap="true"></Label>
+
+  <Button (tap)="gotoNext1()" [text]="'GV_CONTA_PARCIAL_NEXT1' | translate"></Button>
+  <Button (tap)="gotoNext2()" [text]="'GV_CONTA_PARCIAL_NEXT2' | translate"></Button>
+</StackLayout>
