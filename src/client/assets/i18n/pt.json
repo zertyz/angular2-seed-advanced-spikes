@@ -9,12 +9,6 @@
   "ADD_BTN_TEXT": "Adicionar",
   "SUCCESS_MSG": "O seu deployment do Angular 2 Advanced Seed funcionou perfeitamente.",
 
-  "APP_NAME": "Garçom Virtual",
-
-  "GV_HOME_TITLE": "Já temos o suficiente para começar!",
-  "GV_HOME_INFO" : "Esta mensagem aparecer signigica que já sabemos criar componentes que trazem conteúdos compartilhados entre Web, Desktop e Mobile. Podemos começar!",
-  "GV_HOME_START": "Clique para começar",
-
   "JSON_SUCKS": "for not allowing the last element to have a comma... for not allowing comments... for requiring indexes to be quoted..."
 
 }
