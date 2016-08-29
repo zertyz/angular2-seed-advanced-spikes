@@ -13,7 +13,7 @@ let template: any;
 let menu: any;
 
 // app
-import {AppConfigService} from './app/frameworks/app/services/app-config.service';
+import {AppConfig} from './app/frameworks/sample/services/app-config';
 
 // Sample
 // You would need a valid `submitURL` to use
@@ -57,7 +57,7 @@ app.on('ready', () => {
     label: 'Language',
     submenu: []
   };
-  for (var lang of AppConfigService.SUPPORTED_LANGUAGES) {
+  for (var lang of AppConfig.SUPPORTED_LANGUAGES) {
     let code = lang.code;
     let langOption = {
       label: lang.title,

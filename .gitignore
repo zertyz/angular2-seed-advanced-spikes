@@ -60,11 +60,8 @@ desktop
 gulpfile.js
 gulpfile.js.map
 
-# nativescript -- it seems we will never customize this folder
-/nativescript/
-
 #VSCode Chrome Debugger Extension (launch.json configuration)
 ChromeDebugger-UserData
-nativescript/app/App_Resources/Android/gen/
+
+# OS X trash files
 .DS_Store
-nativescript/.DS_Store
