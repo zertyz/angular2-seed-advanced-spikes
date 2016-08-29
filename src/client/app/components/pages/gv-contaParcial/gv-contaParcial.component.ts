@@ -23,7 +23,7 @@ export class GvContaParcialComponent {
         duration: 1000,
         name: 'slideTop',
       }
-    }
+    });
   }
 
   gotoNext2() {
