@@ -1,8 +1,8 @@
-import { RouterConfig } from '@angular/router';
+import { Route } from '@angular/router';
 
 import { GvContaParcialComponent } from './gv-contaParcial.component';
 
-export const GvContaParcialRoutes: RouterConfig = [
+export const GvContaParcialRoutes: Route[] = [
   {
     path: 'gv-contaParcial',
     component: GvContaParcialComponent

@@ -1,8 +1,8 @@
-import { RouterConfig } from '@angular/router';
+import { Route } from '@angular/router';
 
 import { GvMenuComponent } from './gv-menu.component';
 
-export const GvMenuRoutes: RouterConfig = [
+export const GvMenuRoutes: Route[] = [
   {
     path: 'gv-menu',
     component: GvMenuComponent

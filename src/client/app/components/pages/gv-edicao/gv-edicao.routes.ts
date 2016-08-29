@@ -1,8 +1,8 @@
-import { RouterConfig } from '@angular/router';
+import { Route } from '@angular/router';
 
 import { GvEdicaoComponent } from './gv-edicao.component';
 
-export const GvEdicaoRoutes: RouterConfig = [
+export const GvEdicaoRoutes: Route[] = [
   {
     path: 'gv-edicao',
     component: GvEdicaoComponent

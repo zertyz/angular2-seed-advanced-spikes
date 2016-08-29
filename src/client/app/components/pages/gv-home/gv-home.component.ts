@@ -2,10 +2,10 @@
 import {Store} from '@ngrx/store';
 
 // app
-import {FormComponent, RouterExtensions} from '../../../frameworks/core/index';
-import {NameListService} from '../../../frameworks/app/index';
+import { BaseComponent, RouterExtensions } from '../../../frameworks/core/index';
+import { NameListService } from '../../../frameworks/sample/index';
 
-@FormComponent({
+@BaseComponent({
   moduleId: module.id,
   selector: 'gv-home',
   templateUrl: 'gv-home.component.html',

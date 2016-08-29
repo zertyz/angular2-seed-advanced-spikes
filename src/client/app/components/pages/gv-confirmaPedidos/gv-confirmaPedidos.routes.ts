@@ -1,8 +1,8 @@
-import { RouterConfig } from '@angular/router';
+import { Route } from '@angular/router';
 
 import { GvConfirmaPedidosComponent } from './gv-confirmaPedidos.component';
 
-export const GvConfirmaPedidosRoutes: RouterConfig = [
+export const GvConfirmaPedidosRoutes: Route[] = [
   {
     path: 'gv-confirmaPedidos',
     component: GvConfirmaPedidosComponent
