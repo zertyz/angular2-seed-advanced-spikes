@@ -44,11 +44,7 @@
   <% } %>
 
   <% if (ENV === 'dev') { %>
-  <script>
-    System.config(<%=
-      JSON.stringify(SYSTEM_CONFIG, null, 2)
-    %>)
-  </script>
+  <script src="<%= APP_BASE %>system-config.js"></script>
   <% } %>
 
   <!-- libs:js -->

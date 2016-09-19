@@ -1,5 +1,5 @@
-<ActionBar title="About" class="action-bar">
-  <NavigationButton text="Home"></NavigationButton>
+<ActionBar [title]="'ABOUT' | translate" class="action-bar">
+  <NavigationButton [text]="'HOME' | translate"></NavigationButton>
 </ActionBar>
 <StackLayout class="container-content">
   <Label text="Angular 2 Seed Advanced is a starter project that implements best practices in coding, building and testing Angular 2 apps. Additionally it adds various enhancements and integrations for large global projects." textWrap="true"></Label>
@@ -20,5 +20,5 @@
     </StackLayout>
   </ScrollView>
   <!--<nvd3-charts>Rendering...</nvd3-charts>-->
-  <WebView row="1" id="wv"  src="http://instantvas.com">Loading...</WebView>
+  <WebView row="2" id="wv"  src="http://instantvas.com">Loading...</WebView>
 </StackLayout>

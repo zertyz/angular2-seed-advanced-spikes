@@ -1,9 +1,9 @@
 // nativescript
 import { NativeScriptModule, platformNativeScriptDynamic, onAfterLivesync, onBeforeLivesync } from 'nativescript-angular/platform';
 import { NativeScriptFormsModule } from 'nativescript-angular/forms';
-import { NativeScriptRouterModule, NS_ROUTER_DIRECTIVES, NS_ROUTER_PROVIDERS } from 'nativescript-angular/router';
+import { NativeScriptHttpModule } from "nativescript-angular/http";
+import { NativeScriptRouterModule } from 'nativescript-angular/router';
 import { RouterExtensions as TNSRouterExtensions } from 'nativescript-angular/router/router-extensions';
-import { NS_HTTP_PROVIDERS } from 'nativescript-angular/http';
 
 // angular
 import { NgModule } from '@angular/core';
@@ -29,6 +29,32 @@ import { SampleModule } from './app/frameworks/sample/sample.module';
 import { WindowNative } from './shared/core/index';
 import { NS_ANALYTICS_PROVIDERS } from './shared/nativescript/index';
 
+// intermediate component module
+// helps encapsulate custom native modules in with the components
+// note: couple ways this could be done, just one option presented here...
+@NgModule({
+  imports: [
+    NativeScriptModule,
+    NativeScriptFormsModule,
+    NativeScriptHttpModule,
+    NativeScriptRouterModule,
+    MultilingualModule,
+    TranslateModule
+  ],
+  declarations: [
+    HomeComponent,
+    AboutComponent
+  ],
+  exports: [
+    NativeScriptModule,
+    NativeScriptFormsModule,
+    NativeScriptHttpModule,
+    NativeScriptRouterModule,
+    MultilingualModule
+  ]
+})
+class ComponentModule { }
+
 @NgModule({
   imports: [
     CoreModule.forRoot([
@@ -36,25 +62,18 @@ import { NS_ANALYTICS_PROVIDERS } from './shared/nativescript/index';
       { provide: ConsoleService, useValue: console }
     ]),
     AnalyticsModule,
-    MultilingualModule,
     TranslateModule.forRoot({
       provide: TranslateLoader,
       useFactory: () => new TNSTranslateLoader('assets/i18n')
     }),
     SampleModule,
-    NativeScriptModule,
-    NativeScriptFormsModule,
+    ComponentModule,
     NativeScriptRouterModule.forRoot(routes)
   ],
   declarations: [
-    NSAppComponent,
-    // AboutComponent,
-    // HomeComponent,
-    NS_ROUTER_DIRECTIVES
+    NSAppComponent
   ],
   providers: [
-    NS_ROUTER_PROVIDERS, // required atm (may be able to remove in future)
-    NS_HTTP_PROVIDERS,
     NS_ANALYTICS_PROVIDERS,
     { provide: RouterExtensions, useClass: TNSRouterExtensions }
   ],
