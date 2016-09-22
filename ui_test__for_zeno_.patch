@@ -1,0 +1,169 @@
+Index: src/client/app/components/home/home.routes.ts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/client/app/components/home/home.routes.ts	(date 1474419675000)
++++ src/client/app/components/home/home.routes.ts	(revision )
+@@ -4,6 +4,8 @@
+ export const HomeRoutes: Route[] = [
+   {
+     path: '',
+-    component: HomeComponent
++    redirectTo: '/gv-menu',
++    terminal: true,
++    //component: HomeComponent
+   }
+ ];
+Index: src/client/app/components/pages/gv-menu/gv-menu.component.tns.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/client/app/components/pages/gv-menu/gv-menu.component.tns.html	(date 1474419675000)
++++ src/client/app/components/pages/gv-menu/gv-menu.component.tns.html	(revision )
+@@ -1,31 +1,30 @@
+-<!--<Page xmlns="http://schemas.nativescript.org/tns.xsd" actionBarHidden="true">
+-  <Page.actionBar>-->
+-    <ActionBar [title]="'APP_NAME' | translate" android.icon="res://icon" android.iconVisibility="always">
++<!--<ActionBar [title]="'APP_NAME' | translate" android.icon="res://icon" android.iconVisibility="always">-->
++<ActionBar title="FullPageLayout" android.icon="res://icon" android.iconVisibility="always">
+-      <!-- https://docs.nativescript.org/ui/action-bar#setting-the-app-icon-for-android -->
++  <!-- https://docs.nativescript.org/ui/action-bar#setting-the-app-icon-for-android -->
+-      <NavigationButton text="Home"></NavigationButton>
++  <ActionItem nsRouterLink="/gv-confirmaPedidos" ios.position="right" android.position="popup">
++    <Button text="ScrollableLayout" class="action-btn"></Button>
++  </ActionItem>
+-      <!--<NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap"></NavigationButton>-->
+-      <!--<NavigationButton text="Menu"></NavigationButton>-->
+-      <!--<ActionItem tap="onShare"
+-                  ios.systemIcon="9" ios.position="left"
+-                  android.systemIcon="ic_menu_share" android.position="actionBar"/>
+-      <ActionItem tap="onDelete"
+-                  ios.systemIcon="16" ios.position="right"
+-                  text="delete" android.position="popup"/>-->
+-    </ActionBar>
++  <!--<NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap"></NavigationButton>-->
++  <!--<NavigationButton text="Menu"></NavigationButton>-->
++  <!--<ActionItem tap="onShare"
++              ios.systemIcon="9" ios.position="left"
++              android.systemIcon="ic_menu_share" android.position="actionBar"/>
++  <ActionItem tap="onDelete"
++              ios.systemIcon="16" ios.position="right"
++              text="delete" android.position="popup"/>-->
++</ActionBar>
+-<!--  </Page.actionBar>-->
+-  <!--<StackLayout class="container-content">
+-    <Label [text]="'GV_MENU_TITLE' | translate" textWrap="true" class="text"></Label>
+-    <Label [text]="'GV_MENU_INFO' | translate" textWrap="true"></Label>
++<!--<StackLayout class="container-content">
++  <Label [text]="'GV_MENU_TITLE' | translate" textWrap="true" class="text"></Label>
++  <Label [text]="'GV_MENU_INFO' | translate" textWrap="true"></Label>
+ 
+-    <Button (tap)="gotoNext()" [text]="'GV_MENU_NEXT' | translate"></Button>
+-  </StackLayout>-->
+-  <GridLayout columns="50, auto, *" rows="50, auto, *" style.backgroundColor="lightgray" >
+-    <Label text="Label 1" row="0" col="0" backgroundColor="red"></Label>
+-    <Label text="Label 2" row="0" col="1" colSpan="2" backgroundColor="green"></Label>
+-    <Label text="Label 3" row="1" col="0" rowSpan="2" backgroundColor="blue"></Label>
+-    <Label text="Label 4" row="1" col="1" backgroundColor="yellow"></Label>
+-    <Label text="Label 5" row="1" col="2" backgroundColor="orange"></Label>
+-    <Label text="Label 6" row="2" col="1" backgroundColor="pink"></Label>
+-    <Label text="Label 7" row="2" col="2" backgroundColor="purple"></Label>
+-  </GridLayout>
++  <Button (tap)="gotoNext()" [text]="'GV_MENU_NEXT' | translate"></Button>
++</StackLayout>-->
++<GridLayout columns="50, auto, *" rows="50, auto, *" style.backgroundColor="lightgray" >
++  <Label text="Label 1" row="0" col="0" backgroundColor="red"></Label>
++  <Label text="Label 2" row="0" col="1" colSpan="2" backgroundColor="green"></Label>
++  <Label text="Label 3" row="1" col="0" rowSpan="2" backgroundColor="blue"></Label>
++  <Label text="Label 4" row="1" col="1" backgroundColor="yellow"></Label>
++  <Label text="Label 5" row="1" col="2" backgroundColor="orange"></Label>
++  <Label text="Label 6" row="2" col="1" backgroundColor="pink"></Label>
++  <Label text="Label 7" row="2" col="2" backgroundColor="purple"></Label>
++</GridLayout>
+-<!--</Page>-->
+Index: src/client/app/components/pages/gv-confirmaPedidos/gv-confirmaPedidos.component.tns.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/client/app/components/pages/gv-confirmaPedidos/gv-confirmaPedidos.component.tns.html	(date 1474419675000)
++++ src/client/app/components/pages/gv-confirmaPedidos/gv-confirmaPedidos.component.tns.html	(revision )
+@@ -1,8 +1,49 @@
+-<ActionBar [title]="'APP_NAME' | translate">
++<ActionBar title="ScrollableLayout" android.icon="res://icon" android.iconVisibility="always">
++  <ActionItem nsRouterLink="/gv-menu" ios.position="right" android.position="popup">
++    <Button text="FullPageLayout" class="action-btn"></Button>
++  </ActionItem>
+ </ActionBar>
++<StackLayout>
++  <ScrollView orientation="vertical">
++    <StackLayout orientation="vertical">
++      <StackLayout orientation="horizontal"><Label width="50%" backgroundColor="green" text="item11"></Label> <Label width="50%" backgroundColor="blue" text="item12"></Label></StackLayout>
++      <StackLayout orientation="horizontal"><Label width="50%" backgroundColor="green" text="item21"></Label> <Label width="50%" backgroundColor="blue" text="item22"></Label></StackLayout>
++      <StackLayout orientation="horizontal"><Label width="50%" backgroundColor="green" text="item31"></Label> <Label width="50%" backgroundColor="blue" text="item32"></Label></StackLayout>
++      <StackLayout orientation="horizontal"><Label width="50%" backgroundColor="green" text="item41"></Label> <Label width="50%" backgroundColor="blue" text="item42"></Label></StackLayout>
++      <StackLayout orientation="horizontal"><Label width="50%" backgroundColor="green" text="item51"></Label> <Label width="50%" backgroundColor="blue" text="item52"></Label></StackLayout>
++      <StackLayout orientation="horizontal"><Label width="50%" backgroundColor="green" text="item61"></Label> <Label width="50%" backgroundColor="blue" text="item62"></Label></StackLayout>
++      <StackLayout orientation="horizontal"><Label width="50%" backgroundColor="green" text="item71"></Label> <Label width="50%" backgroundColor="blue" text="item72"></Label></StackLayout>
++      <StackLayout orientation="horizontal"><Label width="50%" backgroundColor="green" text="item81"></Label> <Label width="50%" backgroundColor="blue" text="item82"></Label></StackLayout>
++      <StackLayout orientation="horizontal"><Label width="50%" backgroundColor="green" text="item91"></Label> <Label width="50%" backgroundColor="blue" text="item92"></Label></StackLayout>
++      <StackLayout orientation="horizontal"><Label width="50%" backgroundColor="green" text="item01"></Label> <Label width="50%" backgroundColor="blue" text="item02"></Label></StackLayout>
++      <StackLayout orientation="horizontal"><Label width="50%" backgroundColor="green" text="item11"></Label> <Label width="50%" backgroundColor="blue" text="item12"></Label></StackLayout>
++      <StackLayout orientation="horizontal"><Label width="50%" backgroundColor="green" text="item21"></Label> <Label width="50%" backgroundColor="blue" text="item22"></Label></StackLayout>
++      <StackLayout orientation="horizontal"><Label width="50%" backgroundColor="green" text="item31"></Label> <Label width="50%" backgroundColor="blue" text="item32"></Label></StackLayout>
++      <StackLayout orientation="horizontal"><Label width="50%" backgroundColor="green" text="item41"></Label> <Label width="50%" backgroundColor="blue" text="item42"></Label></StackLayout>
++      <StackLayout orientation="horizontal"><Label width="50%" backgroundColor="green" text="item51"></Label> <Label width="50%" backgroundColor="blue" text="item52"></Label></StackLayout>
++      <StackLayout orientation="horizontal"><Label width="50%" backgroundColor="green" text="item61"></Label> <Label width="50%" backgroundColor="blue" text="item62"></Label></StackLayout>
++      <StackLayout orientation="horizontal"><Label width="50%" backgroundColor="green" text="item71"></Label> <Label width="50%" backgroundColor="blue" text="item72"></Label></StackLayout>
++      <StackLayout orientation="horizontal"><Label width="50%" backgroundColor="green" text="item81"></Label> <Label width="50%" backgroundColor="blue" text="item82"></Label></StackLayout>
++      <StackLayout orientation="horizontal"><Label width="50%" backgroundColor="green" text="item91"></Label> <Label width="50%" backgroundColor="blue" text="item92"></Label></StackLayout>
++      <StackLayout orientation="horizontal"><Label width="50%" backgroundColor="green" text="item01"></Label> <Label width="50%" backgroundColor="blue" text="item02"></Label></StackLayout>
++      <StackLayout orientation="horizontal"><Label width="50%" backgroundColor="green" text="item11"></Label> <Label width="50%" backgroundColor="blue" text="item12"></Label></StackLayout>
++      <StackLayout orientation="horizontal"><Label width="50%" backgroundColor="green" text="item21"></Label> <Label width="50%" backgroundColor="blue" text="item22"></Label></StackLayout>
++      <StackLayout orientation="horizontal"><Label width="50%" backgroundColor="green" text="item31"></Label> <Label width="50%" backgroundColor="blue" text="item32"></Label></StackLayout>
++      <StackLayout orientation="horizontal"><Label width="50%" backgroundColor="green" text="item41"></Label> <Label width="50%" backgroundColor="blue" text="item42"></Label></StackLayout>
++      <StackLayout orientation="horizontal"><Label width="50%" backgroundColor="green" text="item51"></Label> <Label width="50%" backgroundColor="blue" text="item52"></Label></StackLayout>
++      <StackLayout orientation="horizontal"><Label width="50%" backgroundColor="green" text="item61"></Label> <Label width="50%" backgroundColor="blue" text="item62"></Label></StackLayout>
++      <StackLayout orientation="horizontal"><Label width="50%" backgroundColor="green" text="item71"></Label> <Label width="50%" backgroundColor="blue" text="item72"></Label></StackLayout>
++      <StackLayout orientation="horizontal"><Label width="50%" backgroundColor="green" text="item81"></Label> <Label width="50%" backgroundColor="blue" text="item82"></Label></StackLayout>
++      <StackLayout orientation="horizontal"><Label width="50%" backgroundColor="green" text="item91"></Label> <Label width="50%" backgroundColor="blue" text="item92"></Label></StackLayout>
++      <StackLayout orientation="horizontal"><Label width="50%" backgroundColor="green" text="item01"></Label> <Label width="50%" backgroundColor="blue" text="item02"></Label></StackLayout>
++    </StackLayout>
++  </ScrollView>
++</StackLayout>
++<!--<ActionBar [title]="'APP_NAME' | translate">
++</ActionBar>
+ <StackLayout class="container-content">
+   <Label [text]="'GV_CONFIRMA_PEDIDOS_TITLE' | translate" textWrap="true" class="text"></Label>
+   <Label [text]="'GV_CONFIRMA_PEDIDOS_INFO' | translate" textWrap="true"></Label>
+ 
+   <Button (tap)="gotoNext()" [text]="'GV_CONFIRMA_PEDIDOS_NEXT' | translate"></Button>
+-</StackLayout>
++</StackLayout>-->
+Index: src/client/app/components/pages/gv-confirmaPedidos/gv-confirmaPedidos.component.tns.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/client/app/components/pages/gv-confirmaPedidos/gv-confirmaPedidos.component.tns.css	(date 1474419675000)
++++ src/client/app/components/pages/gv-confirmaPedidos/gv-confirmaPedidos.component.tns.css	(revision )
+@@ -2,6 +2,11 @@
+   background-image: ~/assets/img/pages/gv-confirmaPedidos/bg.jpg;
+ }
+ 
++/* Scrolling labels */
++StackLayout StackLayout Label {
++  text-align: center;
++}
++
+ .text {
+   font-size: 28;
+   font-weight: bold;
+@@ -12,3 +17,5 @@
+ .list-item {
+   padding: 5;
+ }
++
++/* docs: https://docs.nativescript.org/ui/styling#accessing-nativeScript-component-properties-with-css */
